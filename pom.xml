@@ -19,6 +19,7 @@
         <module>productService</module>
         <module>service-registry</module>
         <module>api-gateway</module>
+        <module>notification-service</module>
     </modules>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -49,6 +50,18 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <configuration>
+                    <from>
+                        <image>eclipse-temurin:17.0.4.1_1-jre</image>
+                    </from>
+                    <to>
+                        <image>registry.hub.docker.com/akshatjain010/${project.artifactId} </image>
+                    </to>
                 </configuration>
             </plugin>
         </plugins>
